@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { dashboardAPI } from '../../api/dashboard';
 import { taxFilingAPI } from '../../api/taxFiling';
 import { Card, StatCard } from '../../components/ui/Card';
-import Badge from '../../components/ui/Badge';
 import Button from '../../components/ui/Button';
 import { PageSkeleton } from '../../components/ui/Skeleton';
 import AnnouncementBanner from '../../components/AnnouncementBanner';

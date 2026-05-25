@@ -71,7 +71,6 @@ export default function AmendmentPage() {
   }
 
   const isVAT = filing.tax_type === 'vat';
-  const isBusinessOrPersonal = ['personal_income', 'business_income', 'turnover'].includes(filing.tax_type);
 
   return (
     <div style={{ maxWidth: '720px', margin: '0 auto' }} className="animate-fade-in">

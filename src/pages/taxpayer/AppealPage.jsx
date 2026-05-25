@@ -8,9 +8,8 @@ import { Textarea } from '../../components/ui/Input';
 import Badge from '../../components/ui/Badge';
 import Breadcrumb from '../../components/ui/Breadcrumb';
 import toast from 'react-hot-toast';
-import { format, differenceInDays } from 'date-fns';
+import { format } from 'date-fns';
 
-const formatETB = n => `ETB ${Number(n || 0).toLocaleString('en-ET', { minimumFractionDigits: 2 })}`;
 
 export default function AppealPage() {
   const { id } = useParams();

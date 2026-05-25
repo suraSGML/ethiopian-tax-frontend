@@ -5,12 +5,11 @@ import { taxFilingAPI } from '../../api/taxFiling';
 import { Card } from '../../components/ui/Card';
 import Badge from '../../components/ui/Badge';
 import Button from '../../components/ui/Button';
-import { format } from 'date-fns';
 
 const formatETB = n => `ETB ${Number(n || 0).toLocaleString('en-ET', { minimumFractionDigits: 2 })}`;
 
 export default function OfficerDashboard() {
-  const { data: summary, isLoading: summaryLoading } = useQuery({
+  const { data: summary } = useQuery({
     queryKey: ['filings-summary'],
     queryFn: () => taxFilingAPI.summary().then(r => r.data),
     refetchInterval: 30000, // Refetch every 30 seconds

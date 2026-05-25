@@ -3,7 +3,6 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { dashboardAPI } from '../../api/dashboard';
 import { Card } from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
-import Badge from '../../components/ui/Badge';
 import Breadcrumb from '../../components/ui/Breadcrumb';
 import { SkeletonLine } from '../../components/ui/Skeleton';
 import toast from 'react-hot-toast';

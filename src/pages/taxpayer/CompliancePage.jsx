@@ -23,7 +23,7 @@ export default function CompliancePage() {
     queryFn: () => taxFilingAPI.myCompliance().then(r => r.data),
   });
 
-  const { data: certs, isLoading: certsLoading } = useQuery({
+  const { data: certs } = useQuery({
     queryKey: ['certificates'],
     queryFn: () => taxFilingAPI.listCertificates().then(r => r.data?.results || r.data || []),
   });
