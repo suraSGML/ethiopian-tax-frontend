@@ -1,0 +1,9 @@
+{
+  "short_name": "ETH Tax System",
+  "name": "Ethiopian Digital Tax Payment System",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1a5276",
+  "background_color": "#f0f4f8"
+}
