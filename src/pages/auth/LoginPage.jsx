@@ -28,13 +28,17 @@ export default function LoginPage() {
 
     setLoading(true);
     setErrors({});
+    console.log('Submitting login form:', form);
     try {
+      console.log('Calling authAPI.login...');
       const res = await authAPI.login(form);
+      console.log('Login response:', res);
       const { access, refresh, user } = res.data;
       setAuth(user, access, refresh);
       toast.success(`Welcome back, ${user.first_name}! 👋`);
       navigate(['tax_officer','super_admin'].includes(user.role) ? '/admin' : '/dashboard');
     } catch (err) {
+      console.error('Login error:', err);
       const data = err.response?.data;
       if (data?.detail) toast.error(data.detail);
       else if (data?.non_field_errors) toast.error(data.non_field_errors[0]);
